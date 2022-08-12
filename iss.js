@@ -19,7 +19,7 @@ const fetchMyIP = function(callback) {
 };
 
 const fetchCoordsByIP = function(ip, callback) {
-  request(`http://ipwho.is/14`, (error, response, body) => {
+  request(`http://ipwho.is/${ip}`, (error, response, body) => {
     if (error) {
       callback(error, null);
       return;
